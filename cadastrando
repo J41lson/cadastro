@@ -1,0 +1,14 @@
+def calcular_idade():
+    while True:
+        nome = input("Digite seu nome completo: ")
+        try:
+            ano_nascimento = int(input("Digite seu ano de nascimento (entre 1922 e 2021): "))
+            if 1922 <= ano_nascimento <= 2021:
+                idade = 2022 - ano_nascimento
+                print(f"\n{nome}, você completou ou completará {idade} anos em 2022.\n")
+            else:
+                print("Erro: Ano de nascimento inválido. Tente novamente.")
+        except ValueError:
+            print("Erro: Você não digitou um número. Tente novamente.")
+
+calcular_idade()
